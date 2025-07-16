@@ -1,69 +1,68 @@
-# React + TypeScript + Vite
+# Virtual Business Card 💼
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern virtual business card site built with React and TypeScript. This site acts as a clean, responsive personal profile with contact capabilities and subtle animations.
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React + TypeScript** – Component-based UI with type safety
+- **TailwindCSS** – Utility-first CSS framework for modern styling
+- **EmailJS** – Seamless contact form with direct-to-inbox messaging
+- **GSAP** – Smooth animations and interactive transitions
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ Responsive layout for all screen sizes
+- ✅ Animated elements using GSAP for dynamic interactions
+- ✅ Contact form powered by EmailJS
+- ✅ Clean, minimal aesthetic with TailwindCSS
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Follow these steps to run the project locally:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/virtual-business-card.git
+cd virtual-business-card
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Add EmailJS environment variables
+
+Create a `.env` file in the root directory and include the following:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
+
+> 💡 You can get these values from your [EmailJS dashboard](https://www.emailjs.com/).
+
+### 4. Run the development server
+
+```bash
+npm run dev
+```
+
+The site should now be running at [http://localhost:5173](http://localhost:5173) (or the port Vite assigns).
+
+---
+
+## 🖼️ Preview
+
+<!-- Optionally include a screenshot or GIF here -->
+
+![Screenshot](./src/assets/cactus1.svg)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
