@@ -1,7 +1,9 @@
 import UserImage from './assets/T&T.png'
 import CactusImage2 from './assets/cactus2.svg'
 import './App.css'
-function App() {
+import Form from './Form'
+
+const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen justify-center items-center px-6 py-10 gap-6 bg-orange-50">
@@ -23,9 +25,13 @@ function App() {
 
       <img
         src={UserImage}
-        className="w-full object-cover rounded-lg"
+        className="w-3/4 object-cover rounded-lg"
         alt="User Image"
       />
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+        We would love to hear from you!
+      </h2>
+      <Form />
     </div>
   )
 }
